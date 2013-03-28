@@ -1,0 +1,12 @@
+Alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+========= Printing Sequence: s2
+
+MISSISSIPPI$
+Inserted 12 suffices
+# Nodes in tree: 19
+# Leaves: 12
+# Internal Nodes: 7
+Longest exact matching repeat: 6: [1, 5)
+Elapsed time for build: 0.006000 ms
+DFS:    5   8  11   4   2   1  12   3   4   1   6   9   2   7  10   3   1   1   0

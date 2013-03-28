@@ -1,0 +1,15 @@
+========= Printing Sequence: s2
+
+MISSISSIPPI$
+S
+S
+M
+P
+$
+P
+I
+S
+S
+I
+I
+I

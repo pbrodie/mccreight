@@ -1,0 +1,10 @@
+========= Printing Sequence: s1
+
+BANANA$
+B
+N
+N
+$
+A
+A
+A

@@ -1,0 +1,8 @@
+Alphabet: ACGT
+
+Inserted 1078176 suffices
+# Nodes in tree: 1777696
+# Leaves: 1078176
+# Internal Nodes: 699520
+Longest exact matching repeat: 754403: [451418, 459793)
+Elapsed time for build: 838.839000 ms
