@@ -1,8 +1,4 @@
 // Patrick Brodie
-// CS 471
-// <A.Kalyanaraman>
-// 3/23/13
-// PA2 - Suffix Trees / McCreight's Algorithm
 
 
 #ifndef SUFFIX_H_

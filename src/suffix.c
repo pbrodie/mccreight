@@ -1,9 +1,5 @@
 
 // Patrick Brodie
-// CptS 471
-// <A.Kalyanaraman>
-// 3/20/13
-// PA2 - Suffix Tree / McCreight's Algorithm
 
 
 #include "suffix.h"
