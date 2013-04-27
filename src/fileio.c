@@ -1,8 +1,17 @@
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include "suffix.h"
 
+
+
+#include "fileio.h"
+
+
+int in_alphabet (char c, char *alphabet)
+// Check whether the given char is in the alphabet.
+{
+	while (*alphabet) {
+		if (c == *alphabet++) return 1;
+	}
+	return 0;
+}
 
 
 void read_alphabet (char **alphabet, char *filename)
@@ -94,3 +103,34 @@ void read_fasta (char **n1, char **s1, char *alphabet, char *filename)
 	
 	fclose (fp);
 }
+
+
+void read_parms (char *filename)
+// Read in the match, mismatch, hgap, and gap penalties.
+{
+	FILE *fp = NULL;
+	int i; char buf[64];
+	if (!(fp = fopen (filename, "r"))) {
+		printf ("Unable to open %s.\n", filename);
+		exit (1);
+	}
+	for (i = 0; i < 4; ++i) {
+		fscanf (fp, "%s", buf);
+		if (strcmp (buf, "match") == 0) {
+			fscanf (fp, "%d", &MATCH);
+		} else if (strcmp (buf, "mismatch") == 0) {
+			fscanf (fp, "%d", &MISMATCH);
+		} else if (strcmp (buf, "h") == 0) {
+			fscanf (fp, "%d", &HGAP);
+		} else if (strcmp (buf, "g") == 0) {
+			fscanf (fp, "%d", &GAP);
+		} else {
+			printf ("Error at %s.\n", buf);
+			printf ("Parameter files must take the form:\n");
+			printf ("match     <#>\nmismatch  <#>\nh         <#>\ng         <#>\n");
+			fclose (fp); exit (1);
+		}
+	}
+	fclose (fp);
+}
+

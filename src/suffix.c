@@ -90,16 +90,6 @@ void print_sequence (char *name, char *sequence)
 }
 
 
-int in_alphabet (char c, char *alphabet)
-// Check whether the given char is in the alphabet.
-{
-	while (*alphabet) {
-		if (c == *alphabet++) return 1;
-	}
-	return 0;
-}
-
-
 void print_children (struct node *node)
 // Print the children of the given node from left to right.
 {
