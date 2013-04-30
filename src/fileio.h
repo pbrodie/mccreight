@@ -1,3 +1,5 @@
+// Author: Patrick Brodie
+
 #ifndef FILEIO_H_
 #define FILEIO_H_
 
